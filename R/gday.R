@@ -1,22 +1,26 @@
-#' Is it GameDay?
+#' Is it Gameday?
 #'
-#' Thus function returns TRUE if your NHL team plays today and false otherwise.
+#' This function returns TRUE if your NHL team plays today
+#' and FALSE otherwise
 #'
 #' By default, I assume you are a Canucks fan.
+#' You know then problem: You're in your office writing R code and
+#' suddenly have the urge to check whether your NHL team has a game today.
+#' Before you know it you just wasted 15 minutes browsing the lastest
+#' news on your favorite hockey webpage.
+#' Suffer no more! You can now ask R directly, without tempting yourself
+#' by firing up your web browser.
 #'
-#' @param team
-#' @return Logical. \code{TRUE} if \code{team} has a NHL game today,
+#' @param team.name The name of your team
+#' @return Logical \code{TRUE} if \code{team.name} has a NHL game today,
 #' \code{FALSE} otherwise
-#'
-#' @keywords misc
-#' @note case in \code{team} is ignored
+#' @note case in \code{team.name} is ignored
 #' @export
 #' @examples
-#' gday()
-#' gday("Canadiens")
-
-gday <- function(team = "canucks") {
-	url <- paste0("http://live.nhle.com/GameData/GCScoreboard/",
-								Sys.Date(), ".jsonp")
-	grepl(team, RCurl::getURL(url), ignore.case = TRUE)
+#' gday("canucks")
+#' gday("Bruins")
+gday <- function(team.name){
+  url  <- paste0('http://live.nhle.com/GameData/GCScoreboard/',
+                 Sys.Date(), '.jsonp')
+  grepl(team.name, RCurl::getURL(url), ignore.case=TRUE)
 }
