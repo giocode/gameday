@@ -17,6 +17,7 @@ This function returns TRUE if your NHL team plays today
 and FALSE otherwise
 }
 \details{
+By default, I assume you are a Canucks fan.
 You know then problem: You're in your office writing R code and
 suddenly have the urge to check whether your NHL team has a game today.
 Before you know it you just wasted 15 minutes browsing the lastest

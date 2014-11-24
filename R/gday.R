@@ -19,7 +19,7 @@
 #' @examples
 #' gday("canucks")
 #' gday("Bruins")
-gday <- function(team.name){
+gday <- function(team.name = "canucks"){
   url  <- paste0('http://live.nhle.com/GameData/GCScoreboard/',
                  Sys.Date(), '.jsonp')
   grepl(team.name, RCurl::getURL(url), ignore.case=TRUE)

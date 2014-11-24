@@ -3,13 +3,10 @@
 \name{gameday}
 \alias{gameday}
 \alias{gameday-package}
-\title{My first R package: gameday}
+\title{R package: gameday
+This package is your personal assistant for checking NHL scores and matches}
 \description{
-A one-line summary of what this package is for
-}
-\details{
-Then we can add a larger paragraph
-that can span several
-lines
+R package: gameday
+This package is your personal assistant for checking NHL scores and matches
 }
 
