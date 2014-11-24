@@ -3,11 +3,7 @@
 \alias{gday}
 \title{Is it Gameday?}
 \usage{
-<<<<<<< HEAD
-gday(team.name = "canucks")
-=======
 gday(team = "canucks", date = Sys.Date())
->>>>>>> gamedate
 }
 \arguments{
 \item{team}{The name of your team}
