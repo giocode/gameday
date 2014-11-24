@@ -78,8 +78,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gday</span>(<span class="st">&quot;Canucks&quot;</span>, <span class="st">&quot;2014-11-24&quot;</span>)</code></pre>
 <pre><code>## [1] FALSE</code></pre>
 <p>However, can see that the Canucks did play yesterday.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gday</span>(<span class="dt">date =</span> <span class="st">&quot;2014-11-24&quot;</span>)</code></pre>
-<pre><code>## [1] FALSE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gday</span>(<span class="dt">date =</span> <span class="st">&quot;2014-11-23&quot;</span>)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
 <p>Notice how important it was to specify the argument name <code>date</code> in the last call since we omitted the <code>team</code> argument.</p>
 </div>
 <div id="checking-the-nhl-scores" class="section level2">
@@ -97,6 +97,21 @@ code > span.er { color: #ff0000; font-weight: bold; }
 ## 2 NY RANGERS RANGERS MONTREAL CANADIENS          5          0
 ## 3      ANAHEIM DUCKS    ARIZONA COYOTES          2          1
 ## 4  VANCOUVER CANUCKS CHICAGO BLACKHAWKS          4          1</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">scores</span>(<span class="st">&quot;2014-11-22&quot;</span>)</code></pre>
+<pre><code>##                      home                  away home_score away_score
+## 1         OTTAWA SENATORS        ST LOUIS BLUES          2          3
+## 2           BOSTON BRUINS    MONTREAL CANADIENS          0          2
+## 3     TORONTO MAPLE LEAFS     DETROIT RED WINGS          4          1
+## 4     TAMPA BAY LIGHTNING        MINNESOTA WILD          2          1
+## 5  NY ISLANDERS ISLANDERS   PITTSBURGH PENGUINS          4          1
+## 6     PHILADELPHIA FLYERS COLUMBUS BLUE JACKETS          4          2
+## 7     WASHINGTON CAPITALS        BUFFALO SABRES          1          2
+## 8     NASHVILLE PREDATORS      FLORIDA PANTHERS          3          2
+## 9            DALLAS STARS     LOS ANGELES KINGS          5          4
+## 10     COLORADO AVALANCHE   CAROLINA HURRICANES          4          3
+## 11         CALGARY FLAMES     NEW JERSEY DEVILS          5          4
+## 12        EDMONTON OILERS    CHICAGO BLACKHAWKS          1          7
+## 13        SAN JOSE SHARKS       ARIZONA COYOTES          3          4</code></pre>
 <blockquote>
 <p>You need internet connexion when using gameday.</p>
 </blockquote>

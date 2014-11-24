@@ -41,7 +41,7 @@ gday("Canucks", "2014-11-24")
 ```
 However, can see that the Canucks did play yesterday.
 ```{r}
-gday(date = "2014-11-24")
+gday(date = "2014-11-23")
 ```
 Notice how important it was to specify the argument name `date` in the last call since we omitted the `team` argument. 
 
@@ -56,6 +56,10 @@ scores()
 
 ```{r}
 scores("2014-11-23")
+```
+
+```{r}
+scores("2014-11-22")
 ```
 
 > You need internet connexion when using gameday.
