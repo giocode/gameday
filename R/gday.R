@@ -21,8 +21,19 @@
 #' gday("Bruins")
 library(assertthat)
 gday <- function(team = "canucks", date = Sys.Date()){
+  if(!internet_connection()) {
+    stop("Error: No internet connection; check your connexion or check on TSN")
+  }
+
+  # assert that date input is correct
+  assertthat::assert_that(check_date(as.Date(date)))
 
   url  <- paste0('http://live.nhle.com/GameData/GCScoreboard/',
                  as.Date(date), '.jsonp')
   grepl(team, RCurl::getURL(url), ignore.case=TRUE)
+}
+
+internet_connection <- function() {
+  tryCatch({RCurl::getURL("www.google.com"); TRUE},
+           error = function(err) FALSE)
 }
