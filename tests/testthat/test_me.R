@@ -23,3 +23,12 @@ test_that("check_date testing", {
   expect_error(check_date("2014-11-32"))
   expect_error(check_date("201-41123"))
 })
+
+test_that("There were 13 games on November 22nd", {
+  expect_true(nrow(scores("2014-11-22")) == 13)
+})
+test_that("Gameday does not know the scores for tomorrow's games", {
+  expect_false(any(is.na(scores(lubridate::today() + lubridate::days(1))[c("home_score", "away_score")])))
+})
+
+

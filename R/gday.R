@@ -34,7 +34,3 @@ gday <- function(team = "canucks", date = Sys.Date()){
   grepl(team, RCurl::getURL(url), ignore.case=TRUE)
 }
 
-internet_connection <- function() {
-  tryCatch({RCurl::getURL("www.google.com"); TRUE},
-           error = function(err) FALSE)
-}
