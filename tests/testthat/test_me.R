@@ -5,3 +5,14 @@ test_that("case is ignored", {
 test_that("Seattle does not have a NHL team", {
   expect_false(gday("seattle"))
 })
+
+
+test_that("Vancouver Canucks had a game against Nashville Predators on 2014-11-02", {
+  expect_true(gday(team = "canucks",   date = "2014-11-02"))
+  expect_true(gday(team = "predators", date = "2014-11-02"))
+})
+
+test_that("Calgary Flames took rest on 2014-11-23 after beating the Oilers", {
+  expect_false(gday("flames", "2014-11-23"))
+  expect_false(gday("oilers", "2014-11-23"))
+})
