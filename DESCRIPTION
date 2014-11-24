@@ -1,6 +1,6 @@
 Package: gameday
 Title: Does My Team Play Today?
-Version: 0.0.2
+Version: 1.0.1
 Authors@R: "Rindra R. <rindra@ece.ubc.ca> [aut, cre]"
 Description: Query live.nhle.com to check if my team is playing today.
 Depends:
@@ -8,7 +8,10 @@ Depends:
 License: CC0
 LazyData: true
 Imports:
-    RCurl
+    RCurl,
+    assertthat,
+    testthat,
+    lubridate
 Suggests:
     knitr,
     testthat
