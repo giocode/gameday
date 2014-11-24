@@ -3,7 +3,7 @@
 \alias{gday}
 \title{Is it Gameday?}
 \usage{
-gday(team.name)
+gday(team.name = "canucks")
 }
 \arguments{
 \item{team.name}{The name of your team}
