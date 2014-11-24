@@ -3,13 +3,15 @@
 \alias{gday}
 \title{Is it Gameday?}
 \usage{
-gday(team.name)
+gday(team = "canucks", date = Sys.Date())
 }
 \arguments{
-\item{team.name}{The name of your team}
+\item{team}{The name of your team}
+
+\item{date}{The date of the game}
 }
 \value{
-Logical \code{TRUE} if \code{team.name} has a NHL game today,
+Logical \code{TRUE} if \code{team} has a NHL game on \code{date},
 \code{FALSE} otherwise
 }
 \description{
@@ -17,7 +19,7 @@ This function returns TRUE if your NHL team plays today
 and FALSE otherwise
 }
 \details{
-By default, I assume you are a Canucks fan.
+By default, gameday assumes you are a Canucks fan no matter where you are.
 You know then problem: You're in your office writing R code and
 suddenly have the urge to check whether your NHL team has a game today.
 Before you know it you just wasted 15 minutes browsing the lastest
@@ -26,10 +28,12 @@ Suffer no more! You can now ask R directly, without tempting yourself
 by firing up your web browser.
 }
 \note{
-case in \code{team.name} is ignored
+case in \code{team} is ignored
+
+if \code{date} is not provided, games for today is checked
 }
 \examples{
 gday("canucks")
-gday("Bruins")
+gday("canadiens", "2014-11-23")
 }
 

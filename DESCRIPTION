@@ -8,7 +8,9 @@ Depends:
 License: CC0
 LazyData: true
 Imports:
-    RCurl
+    RCurl,
+    assertthat,
+    lubridate
 Suggests:
     knitr,
     testthat
